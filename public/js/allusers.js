@@ -8,7 +8,7 @@ export const allUsers = async (next) => {
     const date = new Date();
     const result = await axios({
       method: 'GET',
-      url: `http://127.0.0.1:7000/api/v1/admin?page=${nextPage}&limit=10&sort=${filterIt}`,
+      url: `/api/v1/admin?page=${nextPage}&limit=10&sort=${filterIt}`,
     });
 
     const allusers = result.data.data.users;

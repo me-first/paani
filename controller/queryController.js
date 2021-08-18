@@ -5,8 +5,6 @@ const catchAsync = require('../utils/catchAsync');
 exports.createQuery = catchAsync(async (req, res, next) => {
   if (!req.body.user) req.body.user = req.user.id;
 
-  console.log(req.user.email === req.body.email);
-
   if (req.user.name !== req.body.name)
     return next(new AppError('Please enter valid registered name', 401));
 

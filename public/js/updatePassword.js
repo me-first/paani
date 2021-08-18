@@ -10,7 +10,7 @@ export const updatePassword = async (
   try {
     const result = await axios({
       method: 'POST',
-      url: `http://127.0.0.1:7000/api/v1/${type}/updatePassword`,
+      url: `/api/v1/${type}/updatePassword`,
       data: {
         passwordCurrent,
         password,
@@ -18,7 +18,7 @@ export const updatePassword = async (
       },
     });
 
-    console.log(result);
+    // console.log(result);
 
     if (result.data.status === 'success') {
       showAlert('success', 'Password updated Successfully');

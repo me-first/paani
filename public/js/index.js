@@ -180,7 +180,6 @@ if (calenderUser) {
   const [user] = JSON.parse(calenderUser.dataset.user);
   const date = new Date();
   const days = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-  console.log(user);
 
   for (let i = 1; i <= days; i++) {
     const markup = `

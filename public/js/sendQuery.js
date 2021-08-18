@@ -5,7 +5,7 @@ export const sendQuery = async (name, email, message) => {
   try {
     const result = await axios({
       method: 'POST',
-      url: `http://127.0.0.1:7000/api/v1/users/createQuery`,
+      url: `/api/v1/users/createQuery`,
       data: {
         name,
         email,
@@ -13,7 +13,7 @@ export const sendQuery = async (name, email, message) => {
       },
     });
 
-    console.log(result);
+    // console.log(result);
     if (result.data.status === 'success') {
       showAlert('success', 'Your Query is successfully sent!');
     }

@@ -5,11 +5,11 @@ export const updateData = async (type, data) => {
   try {
     const result = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:7000/api/v1/${type}/updateMe`,
+      url: `/api/v1/${type}/updateMe`,
       data,
     });
 
-    console.log(result);
+    // console.log(result);
 
     if (result.data.status === 'success') {
       showAlert('success', 'Data updated Successfully');

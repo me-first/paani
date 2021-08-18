@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/AppError');
 const globalError = require('./controller/errorController');
@@ -83,6 +84,9 @@ app.use(
     },
   })
 );
+
+//COMPRESSION
+app.use(compression());
 
 //RATELIMITER
 const limiter = rateLimit({
