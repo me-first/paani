@@ -1,0 +1,25 @@
+nav.navbar
+    .navbar__logo PAANI
+    .navbar__options
+        .navigation
+            ul.navigation__list
+                li
+                    a.navigation__item.navigation__item--active(href='/') Home
+                li
+                    a.navigation__item(href='/') Options
+                li
+                    a.navigation__item(href='/') Service
+                li
+                    a.navigation__item(href='/') Contact us
+        if user
+            .navbar__button
+                - const type = user.role==='user'?'user':'admin'
+                a.navbar__button--user(href=`/${type}/${user.slug}` id=`${type}`)
+                    img.navbar__button--user-img(src=`../img/users/${user.photo}` alt='user-image')
+                    .navbar__button--user-name=user.name.split(' ')[0]
+                button.navbar__button--logout Logout
+
+        else
+            .navbar__button
+                a.navbar__button--new-connection.text-align(href='/signup') Create Account
+                a.navbar__button--login(href='/login') Login

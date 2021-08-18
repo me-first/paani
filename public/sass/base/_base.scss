@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+$primary-color: #2c1df1;
+$secondary-color: #e7e7e7;
+$para-color: #5c5959;
+
+html {
+  font-size: 62.5%; //10px
+  font-family: "open sans";
+}
+body {
+  box-sizing: border-box;
+}

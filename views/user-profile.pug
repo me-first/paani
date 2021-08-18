@@ -1,0 +1,46 @@
+extends base 
+
+block content 
+
+    section.user
+        .user__option
+            ul.user__option-list
+                li
+                    a.user__option-items(href=`/user/${user.slug}`) Monthly Status
+                li
+                    a.user__option-items(href='#') Settings
+                li
+                    a.user__option-items(href='/user/myProfile') My Profile
+                li
+                    a.user__option-items(href='#') Logout
+
+
+        .profile
+            .profile__text Update Profile
+            form#updateData.form.form-width.margin-top(action='')
+                .form--group
+                    label.form--group-label(for='name') Name
+                    input#name.form--group-input(type='text' value=`${user.name}` required='')
+                .form--group
+                    label.form--group-label(for='email') Email
+                    input#email.form--group-input(type='email' value=`${user.email}` required='')
+                .form--group
+                    label.form--group-label(for='mobile') Mobile
+                    input#mobile.form--group-input(type='text' value=`${user.mobile}` required='')
+                .form--group.margin-top
+                    label#photo-label.form--group-label(for='photo') Upload new photo
+                    img.profile__photo(src=`../img/users/${user.photo}` alt='')
+                    input#photo(type='file' name='photo' accept='image/*')
+                button.btn.update__profile Update Profile
+            .profile__text Update Password
+            form#updatePassword.form.form-width.margin-top(action='')
+                .form--group
+                    label.form--group-label(for='passwordcurrent') Current Password
+                    input#passwordcurrent.form--group-input(type='password' placeholder='********' required='' minlength='8')
+                .form--group
+                    label.form--group-label(for='password') New Password
+                    input#password.form--group-input(type='password' placeholder='********' required='' minlength='8')
+                .form--group
+                    label.form--group-label(for='passwordconfrim') Re-enter password
+                    input#passwordconfirm.form--group-input(type='password' placeholder='********' required='' minlength='8')
+                button.btn.update__password Update Password

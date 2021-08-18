@@ -1,0 +1,59 @@
+.options {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease;
+
+  &__heading {
+    font-size: 1.6rem;
+    color: $primary-color;
+    font-weight: 500;
+  }
+  &__para {
+    font-size: 1.4rem;
+    color: $para-color;
+    font-weight: 400;
+    line-height: 3em;
+  }
+  &__images {
+    display: flex;
+    margin-top: 2rem;
+
+    &-bottle10 {
+      align-self: flex-end;
+      &-img {
+        height: 25em;
+        width: 30rem;
+      }
+      &-caption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > * {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-bottle20 {
+      &-img {
+        height: 35em;
+        width: 40rem;
+      }
+
+      &-caption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > * {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

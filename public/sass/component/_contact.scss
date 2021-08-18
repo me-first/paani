@@ -1,0 +1,93 @@
+.contact {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid $secondary-color;
+  transition: transform 0.5s ease;
+
+  &__heading {
+    font-size: 1.6rem;
+    color: $primary-color;
+    font-weight: 500;
+    margin-top: 2rem;
+  }
+  &__para {
+    font-size: 1.4rem;
+    color: $para-color;
+    font-weight: 400;
+    line-height: 3em;
+  }
+
+  &__form {
+    width: 50%;
+    margin-bottom: 2rem;
+
+    &--name {
+      display: flex;
+      margin-bottom: 1rem;
+      justify-content: space-around;
+      align-items: center;
+
+      &-label {
+        color: $primary-color;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      &-input {
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        width: 40rem;
+        border-radius: 0.5rem;
+        font-family: "open sans";
+      }
+    }
+    &--email {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      &-label {
+        color: $primary-color;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      &-input {
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        width: 40rem;
+        border-radius: 0.5rem;
+        font-family: "open sans";
+      }
+    }
+    &--message {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &-label {
+        color: $primary-color;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      &-input {
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        width: 40rem;
+        height: 20rem;
+        border: 2px solid black;
+        border-radius: 0.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.margin-left {
+  margin-left: 18rem;
+  margin-top: 2rem;
+}
+.text-align {
+  text-align: center;
+}

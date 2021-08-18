@@ -1,0 +1,20 @@
+extends base 
+
+block content 
+    section.login
+        h3.login__heading Login
+        p.login__para Please login into your account
+        form#login-form.form 
+            .form--mobile
+                label.form--mobile-label(for='mobile') Mobile
+                input#mobile.form--mobile-input(type='text' placeholder='Your mobile')
+            .form--password
+                label.form--password-label(for='password') Password
+                input#password.form--password-input(type='password' placeholder='Your password')
+            button#login-btn.signup__btn Login
+            
+        .forgot
+            a.forgot__password(href='/forgotPassword') Forgot Password
+        .signup__account
+            span To create new account 
+            a.signup__account-btn(href='/signup') Signup

@@ -1,0 +1,33 @@
+extends base 
+
+block content 
+    section.signup
+        h3.signup__heading Signup
+        p.signup__para
+            | Please fill this form to create new account! or if you already have one
+            | then login.
+        form#signup-form.form(action='')
+            .form--name
+                label.form--name-label(for='name') Name
+                input#name.form--name-input(type='text' placeholder='Your name' required='')
+            .form--email
+                label.form--email-label(for='email') Email
+                input#email.form--email-input(type='email' placeholder='Your email' required='')
+            .form--mobile
+                label.form--mobile-label(for='mobile') Mobile
+                input#mobile.form--mobile-input(type='text' placeholder='Your mobile' required='')
+            .form--group
+                label.form--group-label(for='address') Address
+                input#address.form--group-input(type='text' placeholder='Your address' required='')
+            .form--group
+                label.form--group-label(for='connectionFor') Connection
+                select#connectionFor.connection__select
+                    option.connection__option#10L 10
+                    option.connection__option#20L 20
+            .form--password
+                label.form--password-label(for='password') Password
+                input#password.form--password-input(type='password' placeholder='********' minlength='8')
+            .form--passwordconfrim
+                label.form--passwordconfrim-label(for='passwordConfirm') Re-enter password
+                input#passwordConfirm.form--passwordconfrim-input(type='password' placeholder='confirm password')
+            button#signup-btn.signup__btn Signup

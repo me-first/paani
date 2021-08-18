@@ -1,0 +1,26 @@
+extends base 
+
+block content 
+
+    section.user
+        .user__option
+            ul.user__option-list
+                li
+                    a.user__option-items#alluser-btn(href="/admin/admin") All Users
+                li
+                    a.user__option-items(href='/admin/allQueries') All Queries
+                li
+                    a.user__option-items(href='#') Settings
+                li
+                    a.user__option-items(href='/admin/myProfile') My Profile
+                li
+                    a.user__option-items(href='#') Logout
+
+        .queries
+            h1.queries__heading All Queries
+
+            each query in queries
+                .queries__box
+                    .queries__box-name
+                    a.queries__box-name-link(href='#')=query.name
+                    p.queries__box-message=query.message

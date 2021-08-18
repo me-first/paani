@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paani | Profile</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">PAANI</div>
+
+      <div class="navbar__options">
+        <div class="navigation">
+          <ul class="navigation__list">
+            <li>
+              <a href="#" class="navigation__item navigation__item--active"
+                >Home</a
+              >
+            </li>
+            <li><a href="#" class="navigation__item">Options</a></li>
+            <li><a href="#" class="navigation__item">Service</a></li>
+            <li><a href="#" class="navigation__item">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar__button">
+          <a href="#" class="navbar__button--user">
+            <img
+              class="navbar__button--user-img"
+              src="../img/icons/user.png"
+              alt="user-image"
+            />
+            <div class="navbar__button--user-name">Vivek</div>
+          </a>
+          <a href="#" class="navbar__button--logout">Logout</a>
+          <!-- <a href="#" class="navbar__button--new-connection text-align"
+            >Create Account</a
+          >
+          <a href="#" class="navbar__button--login">Login</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <section class="user">
+      <div class="user__option">
+        <ul class="user__option-list">
+          <li><a href="#" class="user__option-items">Monthly Status</a></li>
+          <li><a href="#" class="user__option-items">Settings</a></li>
+          <li><a href="#" class="user__option-items">My Profile</a></li>
+          <li><a href="#" class="user__option-items">Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="profile">
+        <div class="profile__text">Update Profile</div>
+        <form action="" class="form form-width margin-top">
+          <div class="form--group">
+            <label for="name" class="form--group-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form--group-input"
+              value="Vivek Singh Bhadouria"
+              required
+            />
+          </div>
+          <div class="form--group">
+            <label for="email" class="form--group-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form--group-input"
+              value="vivek@example.com"
+              required
+            />
+          </div>
+          <div class="form--group">
+            <label for="mobile" class="form--group-label">Mobile</label>
+            <input
+              type="text"
+              id="mobile"
+              class="form--group-input"
+              value="7987109019"
+              required
+            />
+          </div>
+
+          <div class="form--group margin-top">
+            <label for="photo" class="form--group-label" id="photo-label"
+              >Upload new photo</label
+            >
+            <img src="../img/icons/user.png" alt="" class="profile__photo" />
+            <input type="file" name="photo" id="photo" accept="imgae/*" />
+          </div>
+
+          <a href="#" class="btn update__profile">Update Profile</a>
+        </form>
+
+        <div class="profile__text">Update Password</div>
+
+        <form action="" class="form form-width margin-top">
+          <div class="form--group">
+            <label for="passwordcurrent" class="form--group-label"
+              >Current Password</label
+            >
+            <input
+              type="password"
+              id="passwordcurrent"
+              class="form--group-input"
+              placeholder="********"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="form--group">
+            <label for="password" class="form--group-label">New Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form--group-input"
+              placeholder="********"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="form--group">
+            <label for="passwordconfrim" class="form--group-label"
+              >Re-enter password</label
+            >
+            <input
+              type="password"
+              id="passwordconfrim"
+              class="form--group-input"
+              placeholder="********"
+              required
+              minlength="8"
+            />
+          </div>
+          <a href="#" class="btn update__password">Update Password</a>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__about">
+        <h4 class="footer__about-heading">About</h4>
+        <p class="footer__about-para">
+          We are here to delever filter and fresh water in your area
+        </p>
+        <p class="footer__about-para">&copy; Vivek Singh Bhadouria, 2021</p>
+      </div>
+
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          <li><a href="#" class="footer__links-items">Home</a></li>
+          <li><a href="#" class="footer__links-items">Options</a></li>
+          <li><a href="#" class="footer__links-items">Service</a></li>
+          <li><a href="#" class="footer__links-items">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__media">
+        <img
+          src="../img/icons/facebook (1).png"
+          alt=""
+          class="footer__media-icon"
+        />
+        <img
+          src="../img/icons/linkedin.png"
+          alt=""
+          class="footer__media-icon"
+        />
+        <img src="../img/icons/twitter.png" alt="" class="footer__media-icon" />
+        <img src="../img/icons/youtube.png" alt="" class="footer__media-icon" />
+      </div>
+    </footer>
+  </body>
+</html>

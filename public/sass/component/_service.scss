@@ -1,0 +1,43 @@
+.service {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid $secondary-color;
+  transition: transform 0.5s ease;
+
+  &__heading {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: $primary-color;
+    font-weight: 500;
+  }
+  &__para {
+    font-size: 1.4rem;
+    color: $para-color;
+    font-weight: 400;
+    line-height: 3em;
+  }
+  &__cities {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    &-one {
+      display: block;
+    }
+    &-two {
+      display: block;
+    }
+    &-name {
+      border: 2px solid $primary-color;
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: $primary-color;
+      transform: skewX(-20deg);
+      width: 30rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+extends base 
+
+block content 
+
+    section.user
+        .user__option
+            ul.user__option-list
+                li
+                    a.user__option-items#alluser-btn(href='/admin/admin') All Users
+                li
+                    a.user__option-items(href='/admin/allQueries') All Queries
+                li
+                    a.user__option-items(href='#') Settings
+                li
+                    a.user__option-items(href='/admin/myProfile') My Profile
+                li
+                    a.user__option-items(href='#') Logout
+        .monthly__status
+            .monthly__status-description This is monthly status of your connection
+            .user__biodata
+                img.user__biodata-img(src=`../img/users/${myuser.photo}` alt='user-name')
+                .user__biodata-name=myuser.name
+                .user__biodata-liter=`${myuser.connectionFor}L`
+                .user__biodata-mobile=myuser.mobile
+                .user__biodata-address=myuser.address
+
+            - const date = new Date();
+            - const monthAndYear = date.toLocaleDateString('en-us',{month:'long',year:'numeric'});
+            .monthly__status-month=monthAndYear
+            .calender#calender__admin(data-user=JSON.stringify(myuser))
+            .total
+                .total__days
+                    h2.total__days--heading-primary=`Total days out of ${new Date(date.getFullYear(),date.getMonth(), 0).getDate()}`
+                    h2.total__days--heading-primary=`${myuser.successDelivery} days`
+                .total__litres
+                    h2.total__litres--heading-primary Total amount of water delivered
+                    - const total =myuser.successDelivery*(+myuser.connectionFor);
+                    h2.total__litres--heading-primary=`${myuser.successDelivery}x${(+myuser.connectionFor)} = ${total} Liters`
+                .total__payment
+                    h2.total__payment--heading-primary=`Total payable amount till ${monthAndYear.split(' ')[0]} ${date.getDate()}`
+                    h2.total__payment--heading-primary=`${myuser.successDelivery}x${(+myuser.connectionFor)} = Rs ${total}`

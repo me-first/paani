@@ -1,0 +1,42 @@
+extends base 
+
+block content 
+    section.user
+        .user__option
+            ul.user__option-list
+                li
+                    a.user__option-items(href=`/user/${user.slug}`) Monthly Status
+                li
+                    a.user__option-items(href='#') Settings
+                li
+                    a.user__option-items(href='/user/myProfile') My Profile
+                li
+                    a.user__option-items(href='#') Logout
+        .monthly__status
+            .monthly__status-description This is monthly status of your connection
+            - const date = new Date();
+            - const getMonthYear = date.toLocaleDateString('en-us',{month:'long',year:'numeric'})
+            .monthly__status-month=getMonthYear 
+            .calender#calender__user(data-user=singleUser)
+                //- .calender__box
+                //-     .calender__date 1
+                //-     .calender__date-status Success
+                //-     .calender__date-icons
+                //-         img.success(src='../img/icons/check.png' alt='success')
+                //-         img.fail(src='../img/icons/remove.png' alt='fail')
+                
+            .total
+                .total__days
+                    h2.total__days--heading-primary=`Total days out of ${new Date(date.getFullYear(),date.getMonth(), 0).getDate()}`
+                    h2.total__days--heading-primary=`${singleUser[0].successDelivery} days`
+                .total__litres
+                    h2.total__litres--heading-primary Total amount of water delivered
+                    - const total = singleUser[0].successDelivery*(+singleUser[0].connectionFor);
+                    h2.total__litres--heading-primary=`${singleUser[0].successDelivery}x${singleUser[0].connectionFor} = ${total} Liters`
+                .total__payment
+                    h2.total__payment--heading-primary=`Total payable amount till ${date.getDate()}`
+                    h2.total__payment--heading-primary=`${singleUser[0].successDelivery}x${singleUser[0].connectionFor} = Rs ${total}`
+            .raise-issue
+                .raise-issue__text
+                    | Any problem with monthly status please feel free to contact us
+                a.raise-issue__link(href='/') Raise Issue

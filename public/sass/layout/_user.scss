@@ -1,0 +1,29 @@
+.user {
+  height: 80rem;
+  display: flex;
+  padding: 0 10rem;
+
+  &__option {
+    height: 100%;
+    border-left: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    flex: 0 0 20%;
+
+    &-list {
+      margin-top: 2rem;
+      list-style: none;
+      color: $primary-color;
+    }
+    &-items {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      margin-bottom: 1rem;
+
+      &:hover {
+        color: #444343;
+      }
+    }
+  }
+}

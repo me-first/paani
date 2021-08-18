@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paani | singup</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">PAANI</div>
+
+      <div class="navbar__options">
+        <div class="navigation">
+          <ul class="navigation__list">
+            <li>
+              <a href="#" class="navigation__item navigation__item--active"
+                >Home</a
+              >
+            </li>
+            <li><a href="#" class="navigation__item">Options</a></li>
+            <li><a href="#" class="navigation__item">Service</a></li>
+            <li><a href="#" class="navigation__item">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar__button">
+          <a href="#" class="navbar__button--new-connection text-align"
+            >Create Account</a
+          >
+          <a href="#" class="navbar__button--login">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="signup">
+      <h3 class="signup__heading">Signup</h3>
+      <p class="signup__para">
+        Please fill this form to create new account! or if you already have one
+        then login.
+      </p>
+
+      <form action="" class="form">
+        <div class="form--name">
+          <label for="name" class="form--name-label">Name</label>
+          <input
+            type="text"
+            class="form--name-input"
+            placeholder="Your name"
+            required
+          />
+        </div>
+        <div class="form--email">
+          <label for="email" class="form--email-label">Email</label>
+          <input
+            type="email"
+            class="form--email-input"
+            placeholder="Your email"
+            required
+          />
+        </div>
+        <div class="form--mobile">
+          <label for="mobile" class="form--mobile-label">Mobile</label>
+          <input
+            type="text"
+            class="form--mobile-input"
+            placeholder="Your mobile"
+            required
+          />
+        </div>
+
+        <div class="form--group">
+          <label for="address" class="form--group-label">Address</label>
+          <input
+            type="text"
+            id="address"
+            class="form--group-input"
+            placeholder="Your address"
+            required
+          />
+        </div>
+        <div class="form--group">
+          <label for="connection" class="form--group-label">Connection</label>
+          <select id="connection" class="connection__select">
+            <option class="connection__option">10</option>
+            <option class="connection__option">20</option>
+          </select>
+        </div>
+
+        <div class="form--password">
+          <label for="password" class="form--password-label">Password</label>
+          <input
+            type="password"
+            class="form--password-input"
+            placeholder="********"
+            minlength="8"
+          />
+        </div>
+        <div class="form--passwordconfrim">
+          <label for="passwordconfrim" class="form--passwordconfrim-label"
+            >Re-enter password</label
+          >
+          <input
+            type="passwordconfrim"
+            class="form--passwordconfrim-input"
+            placeholder="confirm password"
+          />
+        </div>
+
+        <a href="#" class="form__submit">Signup</a>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__about">
+        <h4 class="footer__about-heading">About</h4>
+        <p class="footer__about-para">
+          We are here to delever filter and fresh water in your area
+        </p>
+        <p class="footer__about-para">&copy; Vivek Singh Bhadouria, 2021</p>
+      </div>
+
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          <li><a href="#" class="footer__links-items">Home</a></li>
+          <li><a href="#" class="footer__links-items">Options</a></li>
+          <li><a href="#" class="footer__links-items">Service</a></li>
+          <li><a href="#" class="footer__links-items">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__media">
+        <img
+          src="../img/icons/facebook (1).png"
+          alt=""
+          class="footer__media-icon"
+        />
+        <img
+          src="../img/icons/linkedin.png"
+          alt=""
+          class="footer__media-icon"
+        />
+        <img src="../img/icons/twitter.png" alt="" class="footer__media-icon" />
+        <img src="../img/icons/youtube.png" alt="" class="footer__media-icon" />
+      </div>
+    </footer>
+  </body>
+</html>

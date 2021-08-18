@@ -1,0 +1,182 @@
+.header {
+  height: 50rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 12, 0.63);
+    z-index: -10;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+  align-items: center;
+  height: 8rem;
+  position: relative;
+  // background-color: $secondary-color;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(#000, 0.2);
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $primary-color;
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    display: flex;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__button--user {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px;
+    width: 10rem;
+    text-align: center;
+    &-img {
+      height: 3rem;
+      width: 3.5rem;
+      padding-right: 0.5rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__button--logout {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid $primary-color;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 7px;
+    width: 10rem;
+    text-align: center;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__button--new-connection {
+    display: inline-block;
+    width: 12rem;
+    text-decoration: none;
+    border: 2px solid $primary-color;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: $primary-color;
+    padding: 5px;
+
+    &:hover {
+      background-color: #fff;
+      color: $primary-color;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  &__button--login {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid $primary-color;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 5px;
+    width: 10rem;
+    text-align: center;
+    margin-left: 0.4rem;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.navigation {
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0 2rem;
+    color: rgb(153, 143, 143);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &__item--active {
+    color: $primary-color;
+    position: relative;
+  }
+}
+
+//HERO
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 7rem 2rem 3rem 10rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 60%;
+    margin-right: auto;
+  }
+
+  &__heading--primary-one {
+    font-size: 4rem;
+  }
+  &__heading--primary__blue {
+    color: $primary-color;
+  }
+  &__heading--primary-two {
+    font-size: 4rem;
+  }
+
+  &__heading--secondary {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #5c5959;
+  }
+
+  &__image--bottle {
+    height: 25rem;
+    width: 30rem;
+  }
+
+  &__button {
+    margin-left: 0;
+  }
+}

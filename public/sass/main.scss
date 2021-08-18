@@ -1,0 +1,21 @@
+@import "./base/base";
+@import "./base/animation";
+
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+@import "./layout/user";
+
+@import "./component/options";
+@import "./component/service";
+@import "./component//contact";
+@import "./component/signup";
+@import "./component/login";
+@import "./component/monthly";
+@import "./component/profile";
+@import "./component/adminAllUsers";
+@import "./component/adminGetUser";
+@import "./component/forgotPassword";
+@import "./component/resetPassword";
+@import "./component/error";
+@import "./component/query";

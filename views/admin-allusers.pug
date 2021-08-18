@@ -1,0 +1,38 @@
+extends base 
+
+mixin userBox(img,name,connection,status,statusclass)
+    .users__box
+        img.users__img(src=`../img/icons/${img}` alt='')
+        a.users__name(href='#')=name
+        .users__litre=`${connection}L`
+        .users__status
+            .users__status-text=status
+            .users__status-icon(class=`${statusclass}`)
+
+block content 
+    section.user
+        .user__option
+            ul.user__option-list
+                li
+                    a.user__option-items#alluser-btn(href="/admin/admin") All Users
+                li
+                    a.user__option-items(href='/admin/allQueries') All Queries
+                li
+                    a.user__option-items(href='#') Settings
+                li
+                    a.user__option-items(href='/admin/myProfile') My Profile
+                li
+                    a.user__option-items(href='#') Logout
+        .users
+            h2.users__heading All Connected Users
+            .users__filter
+                label.users__filter-label(for='filter') Sort By
+                select#filter.users__filter-select
+                    //-option.users__filter-option(value='delevered') Delevered
+                    //-option.users__filter-option(value='not-delevered') Not delevered
+                    option.users__filter-option(value='10L') 10L
+                    option.users__filter-option(value='20L') 20L
+            
+            .paginate
+                button.paginate__btn.paginate__prev(type='button') Prev
+                button.paginate__btn.paginate__next Next

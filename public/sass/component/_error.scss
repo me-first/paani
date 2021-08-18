@@ -1,0 +1,17 @@
+.error {
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__heading {
+    font-size: 3rem;
+    color: rgb(250, 62, 62);
+    margin-bottom: 2rem;
+  }
+  &__message {
+    font-size: 1.5rem;
+    color: #777;
+  }
+}
