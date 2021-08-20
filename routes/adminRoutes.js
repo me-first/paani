@@ -32,6 +32,8 @@ router.delete(
 router.patch(
   '/updateMe',
   authController.protect(Admin),
+  userController.updateUserPhoto,
+  userController.resizeUserPhoto,
   userController.updateMe(Admin)
 );
 

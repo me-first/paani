@@ -216,6 +216,7 @@ if (calenderUser) {
 if (updateProfileForm) {
   updateProfileForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const user = JSON.parse(updateProfileForm.dataset.user);
 
     const form = new FormData();
     form.append('name', document.querySelector('#name').value);
@@ -223,17 +224,18 @@ if (updateProfileForm) {
     form.append('mobile', document.querySelector('#mobile').value);
     form.append('photo', document.querySelector('#photo').files[0]);
 
-    type = mobile === '7987109019' ? 'admin' : 'users';
+    type = user.role === 'admin' ? 'admin' : 'users';
     updateData(type, form);
   });
 }
 if (updatePasswordForm) {
   updatePasswordForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const user = JSON.parse(updateProfileForm.dataset.user);
     const passwordCurrent = document.querySelector('#passwordcurrent').value;
     const password = document.querySelector('#password').value;
     const passwordConfirm = document.querySelector('#passwordconfirm').value;
-
+    type = user.role === 'admin' ? 'admin' : 'users';
     updatePassword(type, passwordCurrent, password, passwordConfirm);
   });
 }
