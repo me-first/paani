@@ -283,6 +283,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 2px solid #e7e7e7;
+  padding-top: 2rem;
   transition: transform 1s ease;
 }
 .options__heading {
@@ -1120,3 +1122,93 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 600px) {
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 40%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    width: 102%;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar__button {
+    margin: 0;
+    margin-right: 5rem;
+  }
+
+  .navigation__list {
+    align-items: center;
+  }
+  .header {
+    margin-bottom: 12rem;
+  }
+  .hero {
+    padding: 4rem 1rem 2rem 7rem;
+  }
+  .hero__image--bottle {
+    height: 20rem;
+    width: 25rem;
+    margin-left: 10rem;
+    margin-top: 10rem;
+  }
+
+  .options {
+    border-top: 2px solid #e7e7e7;
+    padding-top: 2rem;
+  }
+  .options__para {
+    text-align: center;
+  }
+  .options__images-bottle10-img {
+    height: 20rem;
+    width: 25rem;
+  }
+  .options__images-bottle20-img {
+    height: 25rem;
+    width: 30rem;
+  }
+  .service__para {
+    text-align: center;
+  }
+  .service__cities-name {
+    width: 20rem;
+  }
+  .contact__form {
+    width: 80%;
+  }
+  .footer {
+    padding: 0;
+    width: 100%;
+  }
+  .signup {
+    width: 100vw;
+  }
+  .form {
+    width: 100%;
+  }
+  .user {
+    padding: 0;
+    height: 126rem;
+  }
+  .user__biodata {
+    margin-left: 1rem;
+  }
+  .calender {
+    margin-left: -1rem;
+  }
+  .total {
+    width: 90%;
+    margin: 2rem 1rem;
+  }
+}

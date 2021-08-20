@@ -55,55 +55,56 @@ html
                             a.navbar__button--login(href='/login') Login
                 .hero__image
                     img.hero__image--bottle(src='../img/bottle.jpg' alt='Water bottle')
-            section.options
-                h3.options__heading#options Options
-                p.options__para
-                    | There are two options, get your connection for 10 Rs for 10 liter
-                    | bottle, or 20 Rs for 20 litre bottle
-                .options__images
-                    figure.options__images-bottle10
+
+        section.options
+            h3.options__heading#options Options
+            p.options__para
+                | There are two options, get your connection for 10 Rs for 10 liter
+                | bottle, or 20 Rs for 20 litre bottle
+            .options__images
+                figure.options__images-bottle10
                         img.options__images-bottle10-img(src='../img/bottle.jpg' alt='bottle 10')
                         figcaption.options__images-bottle10-caption
                             span Rs 10
                             spna 10 Liter
-                    figure.options__images-bottle20
+                figure.options__images-bottle20
                         img.options__images-bottle20-img(src='../img/bottle.jpg' alt='bottle 20')
                         figcaption.options__images-bottle20-caption
                             span Rs 20
                             spna 20 Liter
-            section.service#service
-                h3.service__heading Service
-                p.service__para
-                    | We are now delevering in gwalior city, but in future we will cover major
-                    | city in India for sure!
-                .service__cities
-                    .service__cities-one
-                        .service__cities-name DD Nagar
-                        .service__cities-name Samarth Nagar
-                        .service__cities-name Rachana Nagar
-                        .service__cities-name Gole ka Mandir
-                    .service__cities-two
-                        .service__cities-name Pinto Park
-                        .service__cities-name Hazira
-                        .service__cities-name Morar
-                        .service__cities-name Kunj Vihar
-            section.contact#contact
-                h3.contact__heading Contact Us
-                p.contact__para
-                    | Please fill this form if you have any queries related to our service
-                form.contact__form(action='')
-                    .contact__form--name
-                        label.contact__form--name-label(for='name') Name
-                        input#name.contact__form--name-input(type='text' placeholder='Your Name')
-                    .contact__form--email
-                        label.contact__form--email-label(for='email') Email
-                        input#email.contact__form--email-input(type='email' placeholder='Your Email')
-                    .contact__form--message
-                        label.contact__form--message-label(for='message') Message
-                        textarea#message.contact__form--message-input(placeholder='Enter your message here')
-                    .navbar__button.hero__button.margin-left
-                        button.btn.navbar__button--new-connection.text-align Submit
+        section.service#service
+            h3.service__heading Service
+            p.service__para
+                | We are now delevering in gwalior city, but in future we will cover major
+                | city in India for sure!
+            .service__cities
+                .service__cities-one
+                    .service__cities-name DD Nagar
+                    .service__cities-name Samarth Nagar
+                    .service__cities-name Rachana Nagar
+                    .service__cities-name Gole ka Mandir
+                .service__cities-two
+                    .service__cities-name Pinto Park
+                    .service__cities-name Hazira
+                    .service__cities-name Morar
+                    .service__cities-name Kunj Vihar
+        section.contact#contact
+            h3.contact__heading Contact Us
+            p.contact__para
+                | Please fill this form if you have any queries related to our service
+            form.contact__form(action='')
+                .contact__form--name
+                    label.contact__form--name-label(for='name') Name
+                    input#name.contact__form--name-input(type='text' placeholder='Your Name')
+                .contact__form--email
+                    label.contact__form--email-label(for='email') Email
+                    input#email.contact__form--email-input(type='email' placeholder='Your Email')
+                .contact__form--message
+                    label.contact__form--message-label(for='message') Message
+                    textarea#message.contact__form--message-input(placeholder='Enter your message here')
+                .navbar__button.hero__button.margin-left
+                    button.btn.navbar__button--new-connection.text-align Submit
         
             //FOOTER
-            include _footer
-            script(src="/js/bundle.js") 
+        include _footer
+        script(src="/js/bundle.js") 
